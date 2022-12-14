@@ -1,0 +1,247 @@
+body {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+  
+  .form {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 500px;
+    padding: 20px;
+    width: 320px;
+    position: absolute;
+    margin-left: 800px;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  
+  .input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  .cut {
+    background-color: #15172b;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  }
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  .input:focus ~ .cut,
+  .input:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  
+  .input:focus ~ .placeholder,
+  .input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+  
+  .input:focus ~ .placeholder {
+    color: #dc2f55;
+  }
+  
+  .submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #06b;
+  }
+  .addzero{
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    outline: 0;
+    text-align: center;
+    width: 300px;
+    position: absolute;
+margin-right: 900px;
+   
+    
+  }
+  .minprice{
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    position: absolute;
+    outline: 0;
+    text-align: center;
+    width: 300px;
+    margin-top: 200px;
+    margin-right: 900px;
+    
+  }
+  .change{
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 400px;
+    outline: 0;
+    text-align: center;
+    width: 300px;
+    position: absolute;
+   margin-right: 900px;
+    
+  }
+  .addzero:active {
+    background-color: #06b;
+  }
+  .minprice:active {
+    background-color: #06b;
+  }
+  .change:active {
+    background-color: #06b;
+  }
+  .post-wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+    display: inline-block;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ .postitem {
+    padding: 10px;
+ 
+    
+ }
+ .post-item-wrap {
+    background: #15172b;
+    position: relative;
+ }
+ .post-item-wrap:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #06b;
+    transform: rotate(1deg);
+    transform-origin: left bottom;
+    transition: .3s ease-in-out;
+ }
+ .post-item-wrap:hover:after {
+    top: 5px;
+    left: 5px;
+    transform: rotate(2deg);
+ }
+ .post-link {
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+ }
+ .post-title {
+    color: #ffffff;
+    margin-bottom: 15px;
+    transition: .3s ease-in-out;
+ }
+ .post-item-wrap:hover .post-title {
+    color: #06b
+ }
+ .post-content {
+    color: #A69888;
+    font-size: 14px;
+ }
+ @media (min-width: 768px) {
+    .post-item {
+       flex-basis: 50%;
+       flex-shrink: 0;
+    }
+ }
+ @media (min-width: 960px) {
+    .post-item {
+       flex-basis: 33.333333333%;
+    }
+ }
